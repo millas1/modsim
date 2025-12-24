@@ -4,7 +4,7 @@
 	         AnyLogic Project File
 *************************************************
 -->
-<AnyLogicWorkspace WorkspaceVersion="1.9" AnyLogicVersion="8.9.6.202509050523" AlpVersion="8.9.6">
+<AnyLogicWorkspace WorkspaceVersion="1.9" AnyLogicVersion="8.9.7.202512121156" AlpVersion="8.9.7">
 <Model>
 	<Id>1761836421623</Id>
 	<Name><![CDATA[influenza1]]></Name>
@@ -113,7 +113,7 @@
 					<Id>1766143151743</Id>
 					<Name><![CDATA[totalinfected]]></Name>
 					<X>540</X><Y>330</Y>
-					<Label><X>0</X><Y>-20</Y></Label>
+					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
@@ -128,7 +128,7 @@
 					<Id>1761836650635</Id>
 					<Name><![CDATA[susceptible]]></Name>
 					<X>130</X><Y>200</Y>
-					<Label><X>0</X><Y>-20</Y></Label>
+					<Label><X>-40</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
@@ -144,7 +144,7 @@
 					<Id>1761836673329</Id>
 					<Name><![CDATA[vaccinated]]></Name>
 					<X>130</X><Y>340</Y>
-					<Label><X>0</X><Y>-20</Y></Label>
+					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
@@ -160,7 +160,7 @@
 					<Id>1761836706183</Id>
 					<Name><![CDATA[recovered]]></Name>
 					<X>750</X><Y>200</Y>
-					<Label><X>0</X><Y>-20</Y></Label>
+					<Label><X>20</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
@@ -176,7 +176,7 @@
 					<Id>1766142811214</Id>
 					<Name><![CDATA[infectedhome]]></Name>
 					<X>400</X><Y>130</Y>
-					<Label><X>0</X><Y>-20</Y></Label>
+					<Label><X>-30</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
@@ -192,7 +192,7 @@
 					<Id>1766142842059</Id>
 					<Name><![CDATA[infectedsevere]]></Name>
 					<X>400</X><Y>220</Y>
-					<Label><X>0</X><Y>-20</Y></Label>
+					<Label><X>-40</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
@@ -208,7 +208,7 @@
 					<Id>1766142855691</Id>
 					<Name><![CDATA[infectedcritical]]></Name>
 					<X>400</X><Y>290</Y>
-					<Label><X>0</X><Y>-20</Y></Label>
+					<Label><X>-40</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
@@ -224,7 +224,7 @@
 					<Id>1761837163213</Id>
 					<Name><![CDATA[vaccinations]]></Name>
 					<X>130</X><Y>200</Y>
-					<Label><X>0</X><Y>-20</Y></Label>
+					<Label><X>-70</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
@@ -243,7 +243,7 @@
 					<Id>1766143036129</Id>
 					<Name><![CDATA[infectionhome]]></Name>
 					<X>130</X><Y>200</Y>
-					<Label><X>0</X><Y>-20</Y></Label>
+					<Label><X>-30</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
@@ -341,7 +341,7 @@
 					<Id>1766143126870</Id>
 					<Name><![CDATA[recoverycritical]]></Name>
 					<X>400</X><Y>290</Y>
-					<Label><X>0</X><Y>-20</Y></Label>
+					<Label><X>30</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
@@ -360,7 +360,7 @@
 					<Id>1761837143906</Id>
 					<Name><![CDATA[population]]></Name>
 					<X>40</X><Y>60</Y>
-					<Label><X>10</X><Y>0</Y></Label>
+					<Label><X>-30</X><Y>-20</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
@@ -425,7 +425,7 @@
 				<Variable Class="Parameter">
 					<Id>1761837371960</Id>
 					<Name><![CDATA[vaccinationrate]]></Name>
-					<X>210</X><Y>310</Y>
+					<X>260</X><Y>380</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -473,7 +473,7 @@
 				<Variable Class="Parameter">
 					<Id>1766142911571</Id>
 					<Name><![CDATA[c]]></Name>
-					<X>360</X><Y>470</Y>
+					<X>180</X><Y>280</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -545,7 +545,7 @@
 				<Variable Class="Parameter">
 					<Id>1766142944047</Id>
 					<Name><![CDATA[p_c]]></Name>
-					<X>210</X><Y>280</Y>
+					<X>260</X><Y>300</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -703,10 +703,10 @@
 				<Link SourceId="1761837371960" TargetId="1761837163213" Polarity="null">
 					<Height>-3.093</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>-80</X><Y>-40</Y></Direction>
+					<Direction><X>-130</X><Y>-110</Y></Direction>
 					<Id>1761837408271</Id>
 					<Name><![CDATA[vaccinationrate - vaccinations]]></Name>
-					<X>210</X><Y>310</Y>
+					<X>260</X><Y>380</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -748,10 +748,10 @@
 				<Link SourceId="1766142911571" TargetId="1766143062750" Polarity="null">
 					<Height>20.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>-95</X><Y>-220</Y></Direction>
+					<Direction><X>85</X><Y>-30</Y></Direction>
 					<Id>1766143491815</Id>
 					<Name><![CDATA[c - infectioncritical]]></Name>
-					<X>360</X><Y>470</Y>
+					<X>180</X><Y>280</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -823,10 +823,10 @@
 				<Link SourceId="1766142911571" TargetId="1766143036129" Polarity="null">
 					<Height>20.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>-95</X><Y>-305</Y></Direction>
+					<Direction><X>85</X><Y>-115</Y></Direction>
 					<Id>1766143870801</Id>
 					<Name><![CDATA[c - infectionhome]]></Name>
-					<X>360</X><Y>470</Y>
+					<X>180</X><Y>280</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -883,10 +883,10 @@
 				<Link SourceId="1766142911571" TargetId="1766143055987" Polarity="null">
 					<Height>20.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>-95</X><Y>-260</Y></Direction>
+					<Direction><X>85</X><Y>-70</Y></Direction>
 					<Id>1766143904041</Id>
 					<Name><![CDATA[c - infectionsevere]]></Name>
-					<X>360</X><Y>470</Y>
+					<X>180</X><Y>280</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -973,10 +973,10 @@
 				<Link SourceId="1766142944047" TargetId="1766143062750" Polarity="null">
 					<Height>20.0</Height>
 					<PolarityPosition>0.95</PolarityPosition>
-					<Direction><X>55</X><Y>-30</Y></Direction>
+					<Direction><X>5</X><Y>-50</Y></Direction>
 					<Id>1766144312684</Id>
 					<Name><![CDATA[p_c - infectioncritical]]></Name>
-					<X>210</X><Y>280</Y>
+					<X>260</X><Y>300</Y>
 					<Label><X>40</X><Y>-50</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1166,6 +1166,107 @@
 					<Delay>false</Delay>
 				</Link>
 			</Dependences>
+			<Events>
+				<Event>
+					<Id>1766569593576</Id>
+					<Name><![CDATA[lockdown_start]]></Name>
+					<Description><![CDATA[lockdown_start: at 35 days we start the lockdown. The number of contacts is reduced significantly (from 10 to 2). The infection probability is also reduced (from 0.05 to 0.03) which can be due to people wearing masks. The home recovery rate is higher because people know to isolate when infected/sick (from 0.1 to 0.15)]]></Description>
+					<X>20</X><Y>460</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties TriggerType="timeout" Mode="occuresOnce">
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[DAY]]></Unit>
+						</Timeout>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_DAY]]></Unit>
+						</Rate>
+						<Id>1766569593574</Id>
+						<OccurrenceAtTime>true</OccurrenceAtTime>
+						<OccurrenceDate>1766649600000</OccurrenceDate>
+						<OccurrenceTime Class="CodeUnitValue">
+							<Code><![CDATA[35]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[DAY]]></Unit>
+						</OccurrenceTime>
+						<RecurrenceCode Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[DAY]]></Unit>
+						</RecurrenceCode>
+						<Condition><![CDATA[false]]></Condition>
+					</Properties>
+					<Action><![CDATA[c = 2; alpha = 0.03; beta_h = 0.15]]></Action>
+				</Event>
+				<Event>
+					<Id>1766571724948</Id>
+					<Name><![CDATA[lockdown_relax]]></Name>
+					<Description><![CDATA[lockdown_relax: after 20 days of strict lockdown, the lockdown rules relax where contacts increase (to 4) and infection probaility is increased to 0.04 because maybe people are not strict with the rules anymore.]]></Description>
+					<X>20</X><Y>480</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties TriggerType="timeout" Mode="occuresOnce">
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[DAY]]></Unit>
+						</Timeout>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_DAY]]></Unit>
+						</Rate>
+						<Id>1766571724946</Id>
+						<OccurrenceAtTime>true</OccurrenceAtTime>
+						<OccurrenceDate>1766649600000</OccurrenceDate>
+						<OccurrenceTime Class="CodeUnitValue">
+							<Code><![CDATA[55]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[DAY]]></Unit>
+						</OccurrenceTime>
+						<RecurrenceCode Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[DAY]]></Unit>
+						</RecurrenceCode>
+						<Condition><![CDATA[false]]></Condition>
+					</Properties>
+					<Action><![CDATA[c = 4; alpha = 0.04;]]></Action>
+				</Event>
+				<Event>
+					<Id>1766572314553</Id>
+					<Name><![CDATA[lockdown_over]]></Name>
+					<Description><![CDATA[lockdown_over: after 30 days of the relaxed lockdown, lockdown is over. Contact numbers are lower than at the beginning but have increased from lock down (now 6, people know to stay home). ]]></Description>
+					<X>20</X><Y>500</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties TriggerType="timeout" Mode="occuresOnce">
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[DAY]]></Unit>
+						</Timeout>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_DAY]]></Unit>
+						</Rate>
+						<Id>1766572314551</Id>
+						<OccurrenceAtTime>true</OccurrenceAtTime>
+						<OccurrenceDate>1766649600000</OccurrenceDate>
+						<OccurrenceTime Class="CodeUnitValue">
+							<Code><![CDATA[85]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[DAY]]></Unit>
+						</OccurrenceTime>
+						<RecurrenceCode Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[DAY]]></Unit>
+						</RecurrenceCode>
+						<Condition><![CDATA[false]]></Condition>
+					</Properties>
+					<Action><![CDATA[c = 6; ]]></Action>
+				</Event>
+			</Events>
 			<AgentLinks>
 				<AgentLink>
 					<Id>1761836421628</Id>
@@ -1288,7 +1389,7 @@
 						<PointStyle>NONE</PointStyle>
 						<LineWidth>1.0</LineWidth>
 					</DatasetExpression>
-					<SamplesToKeep>100</SamplesToKeep>
+					<SamplesToKeep>200</SamplesToKeep>
 					<TimeWindowExpression><![CDATA[100]]></TimeWindowExpression>
 					<FillAreaUnderLine>false</FillAreaUnderLine>
 					<LabelFormat>MODEL_TIME_UNITS</LabelFormat>
@@ -1508,5 +1609,6 @@
 	<Uuid>2216cdd0-177c-5678-9e88-dd8b95312234</Uuid>
 	<Uuid>1737c8c6-b526-4dd8-589e-ee4e205b06f4</Uuid>
 	<Uuid>6a43bef6-8b70-4253-a828-82c3ab399655</Uuid>
+	<Uuid>0a27038a-0f3a-48bb-b235-4a44066a1402</Uuid>
 </ConvertersApplied>
 </AnyLogicWorkspace>

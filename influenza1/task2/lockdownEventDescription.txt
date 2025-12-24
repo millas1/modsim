@@ -1,0 +1,5 @@
+Lockdown Events (2:
+
+1) lockdown_start: at 30 days we start the lockdown. The number of contacts is reduced significantly (from 10 to 2). The infection probability is also reduced (from 0.05 to 0.03) which can be due to people wearing masks. The home recovery rate is higher because people know to isolate when infected/sick (from 0.1 to 0.15)
+
+2) lockdown_relax: after 20 days, the lockdown rules relax where contacts increase (to 4) and infection probaility is increased to 0.04 because maybe people are not strict with the rules anymore.
