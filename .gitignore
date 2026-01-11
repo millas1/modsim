@@ -1,0 +1,4 @@
+.venv/
+venv/
+__pycache__/
+task3/covid19data/

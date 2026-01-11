@@ -1,0 +1,4 @@
+Event,Day,Date,c,alpha,beta_h
+lockdown_start,37,"March 23, 2020",3.0,0.01570666666666667,0.12
+lockdown_relax,77,"May 10, 2020",6.0,0.016688333333333336,0.12
+lockdown_end,137,"July 4, 2020",10.0,0.01767,0.1

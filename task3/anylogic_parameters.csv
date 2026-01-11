@@ -1,0 +1,13 @@
+Parameter,Value,Description
+population,56000000.0,England population
+v0,0.0,initial vaccinated fraction
+r0,0.0,initial recovered fraction
+vaccinationrate,0.0,vaccination rate (people/day)
+c,15.0,daily contacts (pre-lockdown)
+alpha,0.019633333333333336,infection probability per contact
+p_h,0.93,probability of mild case (home)
+p_s,0.05,probability of hospitalization
+p_c,0.02,probability of ICU admission
+beta_h,0.1,home recovery rate (1/days)
+beta_s,0.08333333333333333,hospital recovery rate (1/days)
+beta_c,0.05,ICU recovery rate (1/days)

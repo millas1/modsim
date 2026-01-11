@@ -4,10 +4,10 @@
 	         AnyLogic Project File
 *************************************************
 -->
-<AnyLogicWorkspace WorkspaceVersion="1.9" AnyLogicVersion="8.9.7.202512121156" AlpVersion="8.9.7">
+<AnyLogicWorkspace WorkspaceVersion="1.9" AnyLogicVersion="8.9.7.202512121159" AlpVersion="8.9.7">
 <Model>
 	<Id>1761836421623</Id>
-	<Name><![CDATA[influenza1]]></Name>
+	<Name><![CDATA[influenza_task3]]></Name>
 	<EngineVersion>6</EngineVersion>
 	<JavaPackageName><![CDATA[influenza]]></JavaPackageName>
 	<ModelTimeUnit><![CDATA[Day]]></ModelTimeUnit>
@@ -369,7 +369,7 @@
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[9000000]]></Code>
+							<Code><![CDATA[56000000]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1761837143904</Id>
@@ -459,7 +459,7 @@
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[0.05]]></Code>
+							<Code><![CDATA[0.0195]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1766142904170</Id>
@@ -483,7 +483,7 @@
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[10]]></Code>
+							<Code><![CDATA[15]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1766142911569</Id>
@@ -507,7 +507,7 @@
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[0.8]]></Code>
+							<Code><![CDATA[0.93]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1766142926845</Id>
@@ -531,7 +531,7 @@
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[0.15]]></Code>
+							<Code><![CDATA[0.05]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1766142935952</Id>
@@ -555,7 +555,7 @@
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[0.05]]></Code>
+							<Code><![CDATA[0.02]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1766142944045</Id>
@@ -603,7 +603,7 @@
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[0.1]]></Code>
+							<Code><![CDATA[0.0833]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1766142967725</Id>
@@ -627,7 +627,7 @@
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[0.1]]></Code>
+							<Code><![CDATA[0.05]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1766142975281</Id>
@@ -1170,7 +1170,7 @@
 				<Event>
 					<Id>1766569593576</Id>
 					<Name><![CDATA[lockdown_start]]></Name>
-					<Description><![CDATA[lockdown_start: at 35 days we start the lockdown. The number of contacts is reduced significantly (from 10 to 2). The infection probability is also reduced (from 0.05 to 0.03) which can be due to people wearing masks. The home recovery rate is higher because people know to isolate when infected/sick (from 0.1 to 0.15)]]></Description>
+					<Description><![CDATA[lockdown_start: at 37 days we start the lockdown. The number of contacts is reduced significantly (from 10 to 2). The infection probability is also reduced (from 0.05 to 0.03) which can be due to people wearing masks. The home recovery rate is higher because people know to isolate when infected/sick (from 0.1 to 0.15)]]></Description>
 					<X>20</X><Y>460</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -1189,7 +1189,7 @@
 						<OccurrenceAtTime>true</OccurrenceAtTime>
 						<OccurrenceDate>1766649600000</OccurrenceDate>
 						<OccurrenceTime Class="CodeUnitValue">
-							<Code><![CDATA[35]]></Code>
+							<Code><![CDATA[37]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[DAY]]></Unit>
 						</OccurrenceTime>
 						<RecurrenceCode Class="CodeUnitValue">
@@ -1198,7 +1198,7 @@
 						</RecurrenceCode>
 						<Condition><![CDATA[false]]></Condition>
 					</Properties>
-					<Action><![CDATA[c = 2; alpha = 0.03; beta_h = 0.15]]></Action>
+					<Action><![CDATA[c = 3; alpha = 0.0156; beta_h = 0.12]]></Action>
 				</Event>
 				<Event>
 					<Id>1766571724948</Id>
@@ -1222,7 +1222,7 @@
 						<OccurrenceAtTime>true</OccurrenceAtTime>
 						<OccurrenceDate>1766649600000</OccurrenceDate>
 						<OccurrenceTime Class="CodeUnitValue">
-							<Code><![CDATA[55]]></Code>
+							<Code><![CDATA[77]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[DAY]]></Unit>
 						</OccurrenceTime>
 						<RecurrenceCode Class="CodeUnitValue">
@@ -1231,12 +1231,12 @@
 						</RecurrenceCode>
 						<Condition><![CDATA[false]]></Condition>
 					</Properties>
-					<Action><![CDATA[c = 4; alpha = 0.04;]]></Action>
+					<Action><![CDATA[c = 6; alpha = 0.0166;]]></Action>
 				</Event>
 				<Event>
 					<Id>1766572314553</Id>
 					<Name><![CDATA[lockdown_over]]></Name>
-					<Description><![CDATA[lockdown_over: after 30 days of the relaxed lockdown, lockdown is over. Contact numbers are lower than at the beginning but have increased from lock down (now 6, people know to stay home). ]]></Description>
+					<Description><![CDATA[lockdown_over: after 70 days of the relaxed lockdown, lockdown is over. Contact numbers are lower than at the beginning but have increased from lock down (now 6, people know to stay home). ]]></Description>
 					<X>20</X><Y>500</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
@@ -1255,7 +1255,7 @@
 						<OccurrenceAtTime>true</OccurrenceAtTime>
 						<OccurrenceDate>1766649600000</OccurrenceDate>
 						<OccurrenceTime Class="CodeUnitValue">
-							<Code><![CDATA[85]]></Code>
+							<Code><![CDATA[137]]></Code>
 							<Unit Class="TimeUnits"><![CDATA[DAY]]></Unit>
 						</OccurrenceTime>
 						<RecurrenceCode Class="CodeUnitValue">
@@ -1264,7 +1264,7 @@
 						</RecurrenceCode>
 						<Condition><![CDATA[false]]></Condition>
 					</Properties>
-					<Action><![CDATA[c = 6; ]]></Action>
+					<Action><![CDATA[c = 10; alpha = 0.0176;]]></Action>
 				</Event>
 			</Events>
 			<AgentLinks>
@@ -1434,7 +1434,7 @@
 			<InitialDate><![CDATA[1761782400000]]></InitialDate>	
 			<InitialTime><![CDATA[0.0]]></InitialTime>	
 			<FinalDate><![CDATA[1764460800000]]></FinalDate>	
-			<FinalTime><![CDATA[100.0]]></FinalTime>	
+			<FinalTime><![CDATA[200.0]]></FinalTime>	
 		</ModelTimeProperties>
 		<AnimationProperties>
 			<StopNever>true</StopNever>
@@ -1444,7 +1444,16 @@
 			<EnableDeveloperPanel>false</EnableDeveloperPanel>
 			<ShowDeveloperPanelOnStart>false</ShowDeveloperPanelOnStart>
 		</AnimationProperties>
-		<Inputs>		
+		<Inputs>
+    		<RunConfigurationInput>
+				<Id>1768140750440</Id>
+				<Name><![CDATA[Beta h]]></Name>
+				<InputReference>
+					<PackageName><![CDATA[influenza]]></PackageName>
+					<ClassName><![CDATA[Main]]></ClassName>
+					<ItemName><![CDATA[beta_h]]></ItemName>
+				</InputReference>
+    		</RunConfigurationInput>		
 		</Inputs>
 		<Outputs>
 		</Outputs>
