@@ -1171,7 +1171,7 @@
 					<Id>1766569593576</Id>
 					<Name><![CDATA[lockdown_start]]></Name>
 					<Description><![CDATA[lockdown_start: at 35 days we start the lockdown. The number of contacts is reduced significantly (from 10 to 2). The infection probability is also reduced (from 0.05 to 0.03) which can be due to people wearing masks. The home recovery rate is higher because people know to isolate when infected/sick (from 0.1 to 0.15)]]></Description>
-					<X>20</X><Y>460</Y>
+					<X>580</X><Y>640</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1204,7 +1204,7 @@
 					<Id>1766571724948</Id>
 					<Name><![CDATA[lockdown_relax]]></Name>
 					<Description><![CDATA[lockdown_relax: after 20 days of strict lockdown, the lockdown rules relax where contacts increase (to 4) and infection probaility is increased to 0.04 because maybe people are not strict with the rules anymore.]]></Description>
-					<X>20</X><Y>480</Y>
+					<X>580</X><Y>660</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1237,7 +1237,7 @@
 					<Id>1766572314553</Id>
 					<Name><![CDATA[lockdown_over]]></Name>
 					<Description><![CDATA[lockdown_over: after 30 days of the relaxed lockdown, lockdown is over. Contact numbers are lower than at the beginning but have increased from lock down (now 6, people know to stay home). ]]></Description>
-					<X>20</X><Y>500</Y>
+					<X>580</X><Y>680</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1389,8 +1389,8 @@
 						<PointStyle>NONE</PointStyle>
 						<LineWidth>1.0</LineWidth>
 					</DatasetExpression>
-					<SamplesToKeep>200</SamplesToKeep>
-					<TimeWindowExpression><![CDATA[100]]></TimeWindowExpression>
+					<SamplesToKeep>300</SamplesToKeep>
+					<TimeWindowExpression><![CDATA[250]]></TimeWindowExpression>
 					<FillAreaUnderLine>false</FillAreaUnderLine>
 					<LabelFormat>MODEL_TIME_UNITS</LabelFormat>
     			</TimePlot>
