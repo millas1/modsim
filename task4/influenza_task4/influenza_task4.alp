@@ -18,6 +18,21 @@
 		<ActiveObjectClass>
 			<Id>1761836421627</Id>
 			<Name><![CDATA[Main]]></Name>
+			<StartupCode><![CDATA[// Initialize policy regime
+if (policyMode == 0) {
+  // No lockdown: keep normal parameters from the start
+  c = c_normal;
+  alpha = alpha_normal;
+  isLockdown = false;
+}
+
+if (policyMode == 2 || policyMode == 3) {
+  // Adaptive regimes: start in normal state
+  c = c_normal;
+  alpha = alpha_normal;
+  isLockdown = false;
+}
+]]></StartupCode>
 			<Generic>false</Generic>
 			<GenericParameter>
 				<Id>1761836421632</Id>
@@ -109,6 +124,21 @@
 			<CurrentLevel>1761836421633</CurrentLevel>
 			<ConnectionsId>1761836421628</ConnectionsId>
 			<Variables>
+				<Variable Class="PlainVariable">
+					<Id>1768921321634</Id>
+					<Name><![CDATA[isLockdown]]></Name>
+					<X>670</X><Y>550</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[boolean]]></Type>        
+						<InitialValue Class="CodeValue">
+							<Code><![CDATA[false]]></Code>
+						</InitialValue>
+					</Properties>
+				</Variable>
 				<Variable Class="AuxVariable">
 					<Id>1766143151743</Id>
 					<Name><![CDATA[totalinfected]]></Name>
@@ -441,7 +471,7 @@ Math.max( 0,
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[2000]]></Code>
+							<Code><![CDATA[560000]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1761837371958</Id>
@@ -681,10 +711,106 @@ Math.max( 0,
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[250]]></Code>
+							<Code><![CDATA[200]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1768313347709</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1768921174150</Id>
+					<Name><![CDATA[policyMode]]></Name>
+					<X>670</X><Y>430</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[int]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[3]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1768921174148</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1768921226256</Id>
+					<Name><![CDATA[icuCapacity]]></Name>
+					<X>670</X><Y>400</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[5000]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1768921226254</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1768921249377</Id>
+					<Name><![CDATA[c_normal]]></Name>
+					<X>670</X><Y>460</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[10]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1768921249375</Id>
+							<EditorContolType>TEXT_BOX</EditorContolType>
+							<MinSliderValue><![CDATA[0]]></MinSliderValue>
+							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
+							<DelimeterType>NO_DELIMETER</DelimeterType>
+						</ParameterEditor>
+					</Properties>                 
+				</Variable>
+				<Variable Class="Parameter">
+					<Id>1768921267166</Id>
+					<Name><![CDATA[alpha_normal]]></Name>
+					<X>670</X><Y>490</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" ModificatorType="STATIC">
+						<Type><![CDATA[double]]></Type>
+						<UnitType><![CDATA[NONE]]></UnitType>
+						<SdArray>false</SdArray>
+						<DefaultValue Class="CodeValue">
+							<Code><![CDATA[0.0176]]></Code>
+						</DefaultValue>
+						<ParameterEditor>
+							<Id>1768921267164</Id>
 							<EditorContolType>TEXT_BOX</EditorContolType>
 							<MinSliderValue><![CDATA[0]]></MinSliderValue>
 							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
@@ -1327,7 +1453,11 @@ Math.max( 0,
 						</RecurrenceCode>
 						<Condition><![CDATA[false]]></Condition>
 					</Properties>
-					<Action><![CDATA[c = 3; alpha = 0.0156; beta_h = 0.12]]></Action>
+					<Action><![CDATA[if (policyMode == 1) {
+  c = 3;
+  alpha = 0.0156;
+  beta_h = 0.12;   
+}]]></Action>
 				</Event>
 				<Event>
 					<Id>1766571724948</Id>
@@ -1360,7 +1490,10 @@ Math.max( 0,
 						</RecurrenceCode>
 						<Condition><![CDATA[false]]></Condition>
 					</Properties>
-					<Action><![CDATA[c = 6; alpha = 0.0166;]]></Action>
+					<Action><![CDATA[if (policyMode == 1) {
+  c = 6;
+  alpha = 0.0166;
+}]]></Action>
 				</Event>
 				<Event>
 					<Id>1766572314553</Id>
@@ -1393,7 +1526,96 @@ Math.max( 0,
 						</RecurrenceCode>
 						<Condition><![CDATA[false]]></Condition>
 					</Properties>
-					<Action><![CDATA[c = 10; alpha = 0.0176;]]></Action>
+					<Action><![CDATA[if (policyMode == 1) {
+  c = 10;
+  alpha = 0.0176;
+}
+]]></Action>
+				</Event>
+				<Event>
+					<Id>1768920693707</Id>
+					<Name><![CDATA[lockdown_trigger]]></Name>
+					<X>20</X><Y>500</Y>
+					<Label><X>10</X><Y>20</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties TriggerType="condition" Mode="userControls">
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[DAY]]></Unit>
+						</Timeout>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_DAY]]></Unit>
+						</Rate>
+						<Id>1768920693705</Id>
+						<OccurrenceAtTime>true</OccurrenceAtTime>
+						<OccurrenceDate>1766649600000</OccurrenceDate>
+						<OccurrenceTime Class="CodeUnitValue">
+							<Code><![CDATA[137]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[DAY]]></Unit>
+						</OccurrenceTime>
+						<RecurrenceCode Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[DAY]]></Unit>
+						</RecurrenceCode>
+						<Condition><![CDATA[( policyMode == 2 && !isLockdown && infectedcritical > 0.8 * icuCapacity )
+|| 
+( policyMode == 3 && !isLockdown && infectedcritical > 0.6 * icuCapacity )]]></Condition>
+					</Properties>
+					<Action><![CDATA[isLockdown = true;
+
+if (policyMode == 2) {
+  // Adaptive loose lockdown
+  c = 6;
+  alpha = 0.0166;
+} else if (policyMode == 3) {
+  // Adaptive strict lockdown
+  c = 3;
+  alpha = 0.0156;
+}
+
+]]></Action>
+				</Event>
+				<Event>
+					<Id>1768920775022</Id>
+					<Name><![CDATA[lockdown_release]]></Name>
+					<X>20</X><Y>500</Y>
+					<Label><X>10</X><Y>40</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties TriggerType="condition" Mode="userControls">
+						<Timeout Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[DAY]]></Unit>
+						</Timeout>
+						<Rate Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="RateUnits"><![CDATA[PER_DAY]]></Unit>
+						</Rate>
+						<Id>1768920775020</Id>
+						<OccurrenceAtTime>true</OccurrenceAtTime>
+						<OccurrenceDate>1766649600000</OccurrenceDate>
+						<OccurrenceTime Class="CodeUnitValue">
+							<Code><![CDATA[137]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[DAY]]></Unit>
+						</OccurrenceTime>
+						<RecurrenceCode Class="CodeUnitValue">
+							<Code><![CDATA[1]]></Code>
+							<Unit Class="TimeUnits"><![CDATA[DAY]]></Unit>
+						</RecurrenceCode>
+						<Condition><![CDATA[( policyMode == 2 && isLockdown && infectedcritical < 0.5 * icuCapacity )
+|| 
+( policyMode == 3 && isLockdown && infectedcritical < 0.3 * icuCapacity )]]></Condition>
+					</Properties>
+					<Action><![CDATA[isLockdown = false;
+
+// Return to normal policy state
+c = c_normal;
+alpha = alpha_normal;
+]]></Action>
 				</Event>
 			</Events>
 			<AgentLinks>
@@ -1436,7 +1658,7 @@ Math.max( 0,
     			<TimePlot>
 					<Id>1766145198469</Id>
 					<Name><![CDATA[plot]]></Name>
-					<X>0</X><Y>540</Y>
+					<X>0</X><Y>600</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1518,8 +1740,8 @@ Math.max( 0,
 						<PointStyle>NONE</PointStyle>
 						<LineWidth>1.0</LineWidth>
 					</DatasetExpression>
-					<SamplesToKeep>200</SamplesToKeep>
-					<TimeWindowExpression><![CDATA[100]]></TimeWindowExpression>
+					<SamplesToKeep>2000</SamplesToKeep>
+					<TimeWindowExpression><![CDATA[600]]></TimeWindowExpression>
 					<FillAreaUnderLine>false</FillAreaUnderLine>
 					<LabelFormat>MODEL_TIME_UNITS</LabelFormat>
     			</TimePlot>
@@ -1667,6 +1889,18 @@ Math.max( 0,
 				</Parameter>
 				<Parameter>
 					<ParameterName><![CDATA[vaccineStart]]></ParameterName>
+				</Parameter>
+				<Parameter>
+					<ParameterName><![CDATA[policyMode]]></ParameterName>
+				</Parameter>
+				<Parameter>
+					<ParameterName><![CDATA[icuCapacity]]></ParameterName>
+				</Parameter>
+				<Parameter>
+					<ParameterName><![CDATA[c_normal]]></ParameterName>
+				</Parameter>
+				<Parameter>
+					<ParameterName><![CDATA[alpha_normal]]></ParameterName>
 				</Parameter>
 			</Parameters>
 			<PresentationProperties>
