@@ -1456,8 +1456,10 @@ Math.max( 0,
 					<Action><![CDATA[if (policyMode == 1) {
   c = 3;
   alpha = 0.0156;
-  beta_h = 0.12;   
-}]]></Action>
+  beta_h = 0.12;  
+  isLockdown = true; 
+}
+]]></Action>
 				</Event>
 				<Event>
 					<Id>1766571724948</Id>
@@ -1530,7 +1532,7 @@ Math.max( 0,
   c = 10;
   alpha = 0.0176;
 }
-]]></Action>
+isLockdown = false;]]></Action>
 				</Event>
 				<Event>
 					<Id>1768920693707</Id>
@@ -1706,8 +1708,8 @@ alpha = alpha_normal;
 					<TimeWindowsMovementType>MOVEMENT_WITH_TIME</TimeWindowsMovementType>		
 					<TimeWindowUnits>MODEL_TIME_UNIT</TimeWindowUnits>
 					<VerScaleFromExpression><![CDATA[0]]></VerScaleFromExpression>
-					<VerScaleToExpression><![CDATA[1]]></VerScaleToExpression>
-					<VerScaleType>AUTO</VerScaleType>
+					<VerScaleToExpression><![CDATA[10]]></VerScaleToExpression>
+					<VerScaleType>FIXED</VerScaleType>
 					<DrawLine>true</DrawLine>
 					<Interpolation>LINEAR</Interpolation>
 					<DatasetExpression>  
@@ -1715,7 +1717,8 @@ alpha = alpha_normal;
 					<Id>1766145199001</Id>
 					<Expression><![CDATA[my_dataset]]></Expression>
 					<Color>-9404272</Color>
-					<Expression2><![CDATA[infectedhome]]></Expression2>
+					<Expression2><![CDATA[log10(max(infectedhome, 1))
+]]></Expression2>
 					<Expression2Flag>true</Expression2Flag>
 						<PointStyle>NONE</PointStyle>
 						<LineWidth>1.0</LineWidth>
@@ -1725,7 +1728,7 @@ alpha = alpha_normal;
 					<Id>1766145227876</Id>
 					<Expression><![CDATA[my_dataset1]]></Expression>
 					<Color>-7667573</Color>
-					<Expression2><![CDATA[infectedsevere]]></Expression2>
+					<Expression2><![CDATA[log10(max(infectedsevere, 1))]]></Expression2>
 					<Expression2Flag>true</Expression2Flag>
 						<PointStyle>NONE</PointStyle>
 						<LineWidth>1.0</LineWidth>
@@ -1735,13 +1738,23 @@ alpha = alpha_normal;
 					<Id>1766145242973</Id>
 					<Expression><![CDATA[my_dataset2]]></Expression>
 					<Color>-23296</Color>
-					<Expression2><![CDATA[infectedcritical]]></Expression2>
+					<Expression2><![CDATA[log10(max(infectedcritical, 1))]]></Expression2>
 					<Expression2Flag>true</Expression2Flag>
 						<PointStyle>NONE</PointStyle>
 						<LineWidth>1.0</LineWidth>
 					</DatasetExpression>
+					<DatasetExpression>  
+						<Title><![CDATA[isLockdown]]></Title>
+					<Id>1770550813390</Id>
+					<Expression><![CDATA[my_dataset3]]></Expression>
+					<Color>-256</Color>
+					<Expression2><![CDATA[isLockdown ? 1 : 0]]></Expression2>
+					<Expression2Flag>true</Expression2Flag>
+						<PointStyle>NONE</PointStyle>
+						<LineWidth>4.0</LineWidth>
+					</DatasetExpression>
 					<SamplesToKeep>2000</SamplesToKeep>
-					<TimeWindowExpression><![CDATA[600]]></TimeWindowExpression>
+					<TimeWindowExpression><![CDATA[700]]></TimeWindowExpression>
 					<FillAreaUnderLine>false</FillAreaUnderLine>
 					<LabelFormat>MODEL_TIME_UNITS</LabelFormat>
     			</TimePlot>
